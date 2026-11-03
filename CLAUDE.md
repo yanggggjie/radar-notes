@@ -41,8 +41,7 @@ skill 以这里为准。修改 skill 就改 `.claude/skills/` 下的文件并提
 ## 提交与推送
 
 - 只 `git add` 本期这一个文件，提交说明写 `<radar>: <起始日期> 至 <结束日期>`，结尾加会话给出的 attribution 行。
-- 笔记推送到 `main`：`git pull --rebase origin main`，再 `git push origin HEAD:main`。这是仓库所有者的明确授权，适用于各期笔记文件；会话若另有指定的工作分支，也照样把本期笔记推到 `main`，账本和链接都以 `main` 为准。
-- 改 skill、CLAUDE.md、README 这类非笔记文件，走会话指定的工作分支，由用户决定是否合并。
+- **所有提交都直接推到 `main`**（各期笔记、skill、CLAUDE.md、README 都一样）：`git pull --rebase origin main`，再 `git push origin HEAD:main`。这是仓库所有者的明确要求；会话即使另有指定的工作分支，也照样推到 `main`，不开 PR、不留会话分支。
 - push 失败就重试一次；仍失败，告诉用户原因，并用 SendUserFile 把文件发给用户，保证内容不丢。
 
 ## 链接
